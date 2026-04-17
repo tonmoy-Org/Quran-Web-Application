@@ -9,8 +9,8 @@ export default function VerseList({ verses }) {
   return (
     <div className="space-y-12">
       {verses.map((verse) => (
-        <div
-          key={verse.id}
+        <div 
+          key={verse.id} 
           id={`v${verse.id}`}
           className="group relative p-8 bg-white dark:bg-slate-900 rounded-4xl border border-slate-200 dark:border-slate-800 transition-all hover:shadow-xl hover:shadow-emerald-500/5 hover:border-emerald-500/30"
         >
@@ -19,19 +19,19 @@ export default function VerseList({ verses }) {
           </div>
 
           <div className="space-y-8">
-            <p
+            <p 
               className="text-right leading-[1.8] dark:text-white"
-              style={{
-                fontFamily: settings.arabicFont,
+              style={{ 
+                fontFamily: settings.arabicFont, 
                 fontSize: `${settings.arabicFontSize}px`,
-                direction: 'rtl',
+                direction: 'rtl'
               }}
             >
               {verse.text}
             </p>
 
             <div className="pt-8 border-t border-slate-100 dark:border-slate-800">
-              <p
+              <p 
                 className="text-slate-700 dark:text-slate-300 leading-relaxed font-medium"
                 style={{ fontSize: `${settings.translationFontSize}px` }}
               >
@@ -39,7 +39,7 @@ export default function VerseList({ verses }) {
               </p>
             </div>
           </div>
-
+          
           <div className="absolute bottom-6 right-8 text-[80px] font-black text-slate-50/50 dark:text-slate-800/20 select-none pointer-events-none group-hover:text-emerald-500/5 transition-colors">
             {verse.id}
           </div>
