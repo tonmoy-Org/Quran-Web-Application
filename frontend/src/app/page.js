@@ -3,7 +3,7 @@ import Sidebar from '@/components/Sidebar';
 import { Book, Search as SearchIcon } from 'lucide-react';
 
 async function getSurahs() {
-  const res = await fetch('http://localhost:3001/surahs', {
+  const res = await fetch('https://api-quran-web-application.vercel.app/surahs', {
     next: { revalidate: 3600 },
   });
 

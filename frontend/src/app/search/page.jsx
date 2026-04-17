@@ -37,7 +37,7 @@ export default function SearchPage() {
 
         try {
             const res = await fetch(
-                `http://localhost:3001/search?q=${encodeURIComponent(query)}`
+                `https://api-quran-web-application.vercel.app/search?q=${encodeURIComponent(query)}`
             );
 
             if (res.ok) {

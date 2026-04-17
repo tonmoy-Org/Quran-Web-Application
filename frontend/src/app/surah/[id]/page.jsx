@@ -4,7 +4,7 @@ import VerseList from '@/components/VerseList';
 import { ChevronLeft, Share2 } from 'lucide-react';
 
 async function getSurah(id) {
-  const res = await fetch(`http://localhost:3001/surahs/${id}`, { next: { revalidate: 3600 } });
+  const res = await fetch(`https://api-quran-web-application.vercel.app/surahs/${id}`, { next: { revalidate: 3600 } });
   if (!res.ok) throw new Error('Failed to fetch surah');
   return res.json();
 }
